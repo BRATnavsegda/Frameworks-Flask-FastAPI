@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+    <div class="container mt-3">
+        <h1>{{ title }}</h1>
+        <hr>
+        <p class="display-6"><a href="/store/">Назад</a></p>
+        <div class="row">
+            {% for product in products %}
+                <div class="col-3 border border-2 rounded border-primary text-center m-2">
+                    <h2>{{ product.name }}</h2>
+                    <p class="lead">{{ product.price }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

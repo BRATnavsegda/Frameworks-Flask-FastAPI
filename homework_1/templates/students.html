@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Студенты</title>
+</head>
+<body>
+<table>
+    {% for key in students[0].keys %}
+
+    {% endfor %}
+
+    {% for student in students %}
+
+        <tr>
+            <td>{{ student.first_name }}</td>
+            <td>{{ student.last_name }}</td>
+            <td>{{ student.age }}</td>
+            <td>{{ student.grade }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

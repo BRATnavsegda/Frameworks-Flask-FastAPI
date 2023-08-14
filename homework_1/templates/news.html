@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+    <div class="container mt-3">
+    <h1>{{ title }}</h1>
+        <hr>
+        {% for n in news %}
+            <div class="row">
+                <div class="col-8">
+                    <h2>{{ n.news_title }}</h2>
+                    <span class="lead">{{ n.date }}</span>
+                    <p>{{ n.news_body }}</p>
+                    <hr>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
