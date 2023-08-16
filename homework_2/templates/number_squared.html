@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+
+    <div class="container mt-3">
+
+        <div class="alert alert-primary" role="alert">
+            <h1> Квадрат числа {{ num }} равен {{ res }}</h1>
+        </div>
+            <a href="{{ url_for('index') }}">Вернуться на главную</a>
+
+    </div>
+
+
+{% endblock %}

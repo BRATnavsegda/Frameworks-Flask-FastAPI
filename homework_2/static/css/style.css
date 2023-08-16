@@ -1,0 +1,7 @@
+a {
+    text-decoration: none;
+}
+
+.footer-border {
+    border-top: 1px solid var(--bs-primary);
+}

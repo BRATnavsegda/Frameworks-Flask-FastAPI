@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Успешная авторизация{% endblock %}
+{% block content %}
+  <div class="container mt-3 rounded border-primary text-center">
+
+    <form action="/auth_success/" method="post">
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">
+              {{ message }}
+            </div>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+      <h3>{{ name }}</h3>
+
+
+
+      <input class="btn btn-primary mb-3" type="submit" value="Отправить">
+
+    </form>
+  </div>
+
+{% endblock %}

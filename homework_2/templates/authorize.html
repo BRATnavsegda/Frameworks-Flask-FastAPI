@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+  <div class="container mt-3 rounded border-primary text-center">
+
+    <form action="/index/" method="post">
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">
+              {{ message }}
+            </div>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+      <h3>{{ name }}</h3>
+
+      <div class="mb-3">
+          <label for="exampleInputName1" class="form-label">Ваше имя</label>
+          <input type="text" class="form-control" name="username" id="exampleInputName1" placeholder="{{ enter_name }}">
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Адрес электронной почты</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" name="user_email"
+               placeholder="{{ enter_email }}" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">Мы никогда никому не передадим вашу электронную почту.</div>
+      </div>
+
+      <input class="btn btn-primary mb-3" type="submit" value="Отправить">
+
+    </form>
+  </div>
+
+{% endblock %}

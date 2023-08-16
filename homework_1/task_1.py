@@ -16,7 +16,7 @@ def index():
 def about():
     context = storage.about_text
 
-    return render_template("about.html", **context)
+    return render_template("flash_name.html", **context)
 
 
 @app.route("/contacts/")
@@ -30,14 +30,14 @@ def contacts():
 def news():
     context = storage.news_content
 
-    return render_template("news.html", **context)
+    return render_template("name_age.html", **context)
 
 
 @app.route("/store/")
 def store_categories():
     context = storage.store_categories
 
-    return render_template("store_categories.html", **context)
+    return render_template("correct_age.html", **context)
 
 
 @app.route("/store/<page>/")
