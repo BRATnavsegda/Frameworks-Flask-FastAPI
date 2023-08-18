@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Главная страница{% endblock %}
+
+{% block content %}
+    <div class="container mt-3">
+        <h1>Домашнее задание к третьему семинару.</h1>
+        <h2>Задачи семинара:</h2>
+        {% for task in tasks %}
+            <div class="row">
+                <h3>{{ task.task }}</h3>
+                <p>{{ task.description }}</p>
+                <hr>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+
